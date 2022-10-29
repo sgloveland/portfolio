@@ -1,12 +1,13 @@
 import { Box, Container, IconButton, Link } from '@mui/material'
+import type { NextComponentType } from 'next'
 import Image from 'next/image'
 import { ThemeProvider} from '@mui/system'
 import theme from '../util/theme'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import styles from "../styles/BioCard.module.css"
 
-const BioCard = () => {
+const BioCard: NextComponentType = () => {
     return (
         <ThemeProvider theme={theme}>
             <Container

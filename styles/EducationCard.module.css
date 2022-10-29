@@ -1,0 +1,25 @@
+.container {
+    max-width: 50%;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.content {
+    margin: 5%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    text-align: center;
+}
+
+.text {
+    
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+

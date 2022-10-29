@@ -1,0 +1,35 @@
+.card {
+    max-width: 50%;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.heading {
+    margin: 0;
+}
+
+.text {
+    padding: 0;
+    margin: 0;
+}
+
+.italicText{
+    font-style: italic;
+    color: white;
+}
+
+.paragraphText {
+    font-style: normal;
+    color: black;
+    margin-top: 5%;
+}
+
+.buttonContainer {
+    margin: 0;
+}
