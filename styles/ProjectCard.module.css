@@ -1,0 +1,40 @@
+.container {
+    max-width: 50%;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.content {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    text-align: center;
+}
+
+.header {
+    /* Delete margin?*/
+    margin: 5%;
+    padding-top: 0.5%;
+    text-align: center;
+}
+
+.skillsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 5%;
+    flex-wrap: wrap;
+}
+
+.actionContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 3%;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+

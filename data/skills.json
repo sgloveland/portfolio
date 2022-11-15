@@ -1,0 +1,86 @@
+{
+    "languages": [
+        {
+            "name": "C++",
+            "photo": "/../public/cplusplus.png"
+        },
+        {
+            "name": "HTML",
+            "photo": "/../public/html-5.png"
+        },
+        {
+            "name": "CSS",
+            "photo": "/../public/css-3.png"
+        },
+        {
+            "name": "Javascript",
+            "photo": "/../public/javascript.png"
+        },
+        {
+            "name": "Typescript",
+            "photo": "/../public/typescript.png"
+        },
+        {
+            "name": "SQL",
+            "photo": "/../public/sql.png"
+        },
+        {
+            "name": "Python",
+            "photo": "/../public/python.png"
+        },
+        {
+            "name": "Java",
+            "photo": "/../public/java.png"
+        }
+    ],
+    "frameworks": [
+        {
+            "name": "React",
+            "photo": "/../public/react.png"
+        },
+        {
+            "name": "React Native",
+            "photo": "/../public/react-native.png"
+        },
+        {
+            "name": "jQuery",
+            "photo": "/../public/jquery.png"
+        },
+        {
+            "name": "Next.js",
+            "photo": "/../public/next-js.png"
+        }
+    ],
+    "database": [
+        {
+            "name": "PostgreSQL",
+            "photo": "/../public/postgresql.png"
+        },
+        {
+            "name": "MySQL",
+            "photo": "/../public/mysql.png"
+        }
+    ],
+    "tools": [
+        {
+            "name": "Git",
+            "photo": "/../public/git.png"
+        },
+        {
+            "name": "GitHub",
+            "photo": "/../public/github.png"
+        },
+        {
+            "name": "Expo",
+            "photo": "/../public/expo.png"
+        },
+        {
+            "name": "Node.js",
+            "photo": "/../public/node-js.png"
+        },
+        {
+            "name": "Firebase",
+            "photo": "/../public/firebase.png"
+        }
+    ]
+}

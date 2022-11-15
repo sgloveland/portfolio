@@ -28,7 +28,7 @@ const ExperienceCard = ({title, position, date, description, image}: ExperienceC
                     <p className={`${styles.text} ${styles.paragraphText}`}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati tenetur amet iusto nesciunt vel architecto, labore esse magnam earum vitae saepe similique eaque eligendi temporibus debitis eos id, animi minima?</p>
                 </CardContent>
                 <CardActions className={styles.buttonContainer}>
-                    <Button size='small' className={styles.button} sx={{backgroundColor: "buttons.main"}}>Visit Website</Button>
+                    <Button size='small' className={styles.button} sx={{backgroundColor: "buttons.main", marginLeft: "2%"}}>Visit Website</Button>
                 </CardActions>
             </Card>
         </ThemeProvider>
