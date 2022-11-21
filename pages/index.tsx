@@ -4,9 +4,8 @@ import styles from '../styles/Home.module.css'
 
 import Experience from './experience'
 import Education from './education'
-import ProjectCard from '../components/ProjectCard'
-import SkillBadge from '../components/SkillBadge'
 import Skills from './skills'
+import Project from './project'
 
 
 const Home: NextPage = () => {
@@ -19,14 +18,9 @@ const Home: NextPage = () => {
       </Head>
 
       <Skills />
-      <Education />
       <Experience />
-      {/* <div>
-        <ProjectCard />
-      </div> */}
-      
-      {/* <ExperienceCard title='DOWN GROUPS' position='Full Stack Software Developer' date='June 2022 to Present' description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati tenetur amet iusto nesciunt vel architecto, labore esse magnam earum vitae saepe similique eaque eligendi temporibus debitis eos id, animi minima?" image="/../public/profile.jpg"/> */}
-        
+      <Project />
+      <Education />
     </div>
   )
 }
