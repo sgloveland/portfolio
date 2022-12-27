@@ -16,7 +16,8 @@ const BioCard: NextComponentType = () => {
                 backgroundColor: "primary.dark",
                 width: "50%",
                 height: "auto",
-                borderRadius: 10
+                borderRadius: 10,
+                marginTop: "2%"
             }}>
                 <Box sx={{flex: 1, padding: "3%"}}>
                     <Image className={styles.image} src="/../public/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover"/>
