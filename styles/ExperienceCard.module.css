@@ -1,7 +1,8 @@
 .card {
-    max-width: 50%;
-    width: 30%;
+    flex: 0 1 30%;
+    min-width: 275px;
     border-radius: 10px;
+    margin-bottom: 5%;
 }
 
 .image {

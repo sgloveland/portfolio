@@ -7,35 +7,37 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const list = () => {
     return (
-        <Box sx={{width: 250}}>
-            <List>
-                <ListItem disablePadding>
-                    <ListItemButton>
-                        <ListItemText primary="Skills"></ListItemText>
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton>
-                        <ListItemText primary="Experience"></ListItemText>
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton>
-                        <ListItemText primary="Projects"></ListItemText>
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton>
-                        <ListItemText primary="Education"></ListItemText>
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding>
-                    <ListItemButton>
-                        <ListItemText primary="Resume"></ListItemText>
-                    </ListItemButton>
-                </ListItem>
-            </List>
-        </Box>
+        <ThemeProvider theme={theme}>
+            <Box sx={{width: 250}}>
+                <List>
+                    <ListItem disablePadding>
+                        <ListItemButton className={styles.button}>
+                            <ListItemText className={styles.text} primary="Skills"></ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton className={styles.button}>
+                            <ListItemText className={styles.text} primary="Experience"></ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton className={styles.button}>
+                            <ListItemText className={styles.text} primary="Projects"></ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton className={styles.button}>
+                            <ListItemText className={styles.text} primary="Education"></ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                    <ListItem disablePadding>
+                        <ListItemButton className={styles.button}>
+                            <ListItemText className={styles.text} primary="Resume"></ListItemText>
+                        </ListItemButton>
+                    </ListItem>
+                </List>
+            </Box>
+        </ThemeProvider>
     )
 }
 
@@ -48,12 +50,17 @@ export const NavBar = () => {
 
     return (
         <ThemeProvider theme={theme}>
-        <AppBar position="sticky" sx={{backgroundColor: "primary.dark"}}>
+        <AppBar position="sticky" sx={{backgroundColor: "blue.darkest"}}>
             <Toolbar>
-                <IconButton edge="start" onClick={toggleDrawer} sx={{backgroundColor: "success.main"}}>
-                    <MenuIcon />
+                <IconButton edge="start" onClick={toggleDrawer}>
+                    <MenuIcon sx={{color: "white"}} />
                 </IconButton>
                 <Drawer
+                PaperProps={{
+                    sx: {
+                        backgroundColor: "backdrop.default"
+                    }
+                }}
                 anchor="left"
                 open={state}
                 onClose={toggleDrawer}

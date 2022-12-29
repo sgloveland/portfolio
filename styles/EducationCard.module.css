@@ -1,11 +1,11 @@
 .container {
-    max-width: 50%;
-    width: 30%;
+    flex: 0 1 30%;
+    min-width: 275px;
     border-radius: 10px;
+    margin-bottom: 5%;
 }
 
 .content {
-    margin: 5%;
     padding-top: 0.5%;
     padding-bottom: 0.5%;
     text-align: center;

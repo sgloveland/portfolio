@@ -9,7 +9,7 @@
     {
         "name": "Runkeeper Tweet Report",
         "date" : "October 2022",
-        "description": "Parsed over 8,00 #Runkeeper tweets to create a reporting tool on this data set. Also created data visualizations using Vega-lite and manipulated DOM using jQuery.",
+        "description": "Parsed over 8,000 #Runkeeper tweets to create a reporting tool on this data set. Also created data visualizations using Vega-lite and manipulated DOM using jQuery.",
         "skills": ["Typescript", "jQuery", "Vega-lite"]
     }
 ]

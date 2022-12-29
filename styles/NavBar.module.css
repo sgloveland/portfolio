@@ -1,3 +1,8 @@
 .text {
     margin: 0 auto;
+    color: white;
+}
+
+.button {
+    padding-block: 10%;
 }
