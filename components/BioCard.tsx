@@ -18,7 +18,7 @@ const BioCard: NextComponentType = () => {
                 <Box className={styles.imageContainer}>
                     <Image className={styles.image} src="/../public/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover"/>
                 </Box>
-                <Box sx={{flex: 1, color: "primary.contrastText", marginTop: "2%", textAlign: 'center'}}>
+                <Box className={styles.textContainer}>
                     <p>Hi! My name is Sean Loveland. I am a software engineering major at UCI with a passion for building software that impacts people all around us!</p>
                     <p>Outside of software, some of my hobbies include watching horror movies, playing the violin (I almost ended up playing professionally before switching to the software field), and learning anything and everything I can!</p>
                     <Box sx={{color: "blue.light", textAlign: 'center'}}>
