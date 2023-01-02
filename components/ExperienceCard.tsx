@@ -25,7 +25,7 @@ const ExperienceCard = ({title, position, date, description, image}: ExperienceC
                     <h2 className={styles.heading}>{title}</h2>
                     <p className={`${styles.text} ${styles.italicText}`}>{position}</p>
                     <p className={`${styles.text} ${styles.italicText}`}>{date}</p>
-                    <p className={`${styles.text} ${styles.paragraphText}`}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati tenetur amet iusto nesciunt vel architecto, labore esse magnam earum vitae saepe similique eaque eligendi temporibus debitis eos id, animi minima?</p>
+                    <p className={`${styles.text} ${styles.paragraphText}`}>{description}</p>
                 </CardContent>
                 <CardActions className={styles.buttonContainer}>
                     <Button size='small' className={styles.button} sx={{backgroundColor: "green.darkest", color: "backdrop.light" ,marginLeft: "2%"}}>Visit Website</Button>

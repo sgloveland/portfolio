@@ -17,12 +17,12 @@ const ProjectCard = ({name, date, description, link, skills}: ProjectCardProps) 
         <ThemeProvider theme={theme}>
             <Container className={styles.container} sx={{backgroundColor: "backdrop.default"}}>
                 <Box className={styles.header}>
-                    <h2>{name}</h2>
-                    <p>{date}</p>
+                    <h2 className={styles.headerText}>{name}</h2>
+                    <p className={`${styles.text} ${styles.italicText}`}>{date}</p>
                 </Box>
 
                 <Box className={styles.content}>
-                    <p>{description}</p>
+                    <p className={styles.paragraphText}>{description}</p>
                 </Box>
 
                 <Box className={styles.skillsContainer}>
@@ -35,7 +35,7 @@ const ProjectCard = ({name, date, description, link, skills}: ProjectCardProps) 
 
                 {link && (
                     <Box className={styles.actionContainer}>
-                        <Button sx={{backgroundColor: "green.darkest"}} href="https://stackoverflow.com/questions/68721497/how-to-use-next-js-image-inside-material-ui-card-media" variant='text' size='small'>View Repository</Button>
+                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} href="https://stackoverflow.com/questions/68721497/how-to-use-next-js-image-inside-material-ui-card-media" variant='text' size='small'>View Repository</Button>
                     </Box>
                 )}
             </Container>

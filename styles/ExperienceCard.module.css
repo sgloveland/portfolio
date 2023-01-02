@@ -13,6 +13,9 @@
 
 .heading {
     margin: 0;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 1%;
 }
 
 .text {
@@ -22,15 +25,27 @@
 
 .italicText{
     font-style: italic;
-    color: white;
+    color: rgb(193, 193, 193);
+    font-size: 14px;
 }
+
 
 .paragraphText {
     font-style: normal;
-    color: black;
+    color: white;
     margin-top: 5%;
 }
 
 .buttonContainer {
     margin: 0;
+}
+
+.button {
+    color: white;
+    font-size: 12px;
+}
+
+.button:hover {
+    background-color: #006E08;
+    color: rgb(193, 193, 193);
 }
