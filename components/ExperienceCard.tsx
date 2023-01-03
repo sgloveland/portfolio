@@ -10,9 +10,10 @@ interface ExperienceCardProps {
     date: string
     description: string
     image: string
+    link: string
 }
 
-const ExperienceCard = ({title, position, date, description, image}: ExperienceCardProps) => {
+const ExperienceCard = ({title, position, date, description, image, link}: ExperienceCardProps) => {
     return (
         <ThemeProvider theme={theme}>
             <Card variant="outlined" className={styles.card} sx={{backgroundColor: "backdrop.default"}}>
@@ -28,7 +29,7 @@ const ExperienceCard = ({title, position, date, description, image}: ExperienceC
                     <p className={`${styles.text} ${styles.paragraphText}`}>{description}</p>
                 </CardContent>
                 <CardActions className={styles.buttonContainer}>
-                    <Button size='small' className={styles.button} sx={{backgroundColor: "green.darkest", color: "backdrop.light" ,marginLeft: "2%"}}>Visit Website</Button>
+                    <Button size='small' className={styles.button} sx={{backgroundColor: "green.darkest", color: "backdrop.light" ,marginLeft: "2%"}} href={link}>Visit Website</Button>
                 </CardActions>
             </Card>
         </ThemeProvider>

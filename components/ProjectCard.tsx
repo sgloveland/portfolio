@@ -8,10 +8,11 @@ interface ProjectCardProps {
     date: string;
     description: string;
     link: string | undefined;
+    demo: string | undefined;
     skills: Array<string>;
 }
 
-const ProjectCard = ({name, date, description, link, skills}: ProjectCardProps) => {
+const ProjectCard = ({name, date, description, link, skills, demo}: ProjectCardProps) => {
     // const sampleData = ["React Native", "Expo", "Typescript", "C++", "jQuery", "Next.js", "Alright"]
     return (
         <ThemeProvider theme={theme}>
@@ -35,7 +36,13 @@ const ProjectCard = ({name, date, description, link, skills}: ProjectCardProps) 
 
                 {link && (
                     <Box className={styles.actionContainer}>
-                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} href="https://stackoverflow.com/questions/68721497/how-to-use-next-js-image-inside-material-ui-card-media" variant='text' size='small'>View Repository</Button>
+                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} target="_blank" href={link} variant='text' size='small'>View Repository</Button>
+                    </Box>
+                )}
+
+                {demo && (
+                    <Box className={styles.actionContainer}>
+                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} target="_blank" href={demo} variant='text' size='small'>Watch Demo</Button>
                     </Box>
                 )}
             </Container>

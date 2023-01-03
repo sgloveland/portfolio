@@ -13,7 +13,7 @@ const Project: NextPage = () => {
 
             <Box className={styles.content}>
                 {ProjectData.map((project) => (
-                    <ProjectCard name={project.name} date={project.date} description={project.description} skills={project.skills} link={project.link}/>
+                    <ProjectCard name={project.name} date={project.date} description={project.description} skills={project.skills} link={project.link} demo={project.demo}/>
                 ))}
             </Box>
         </Container>
