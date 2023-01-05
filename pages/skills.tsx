@@ -4,11 +4,12 @@ import SkillBadge from '../components/SkillBadge'
 import styles from "../styles/Skills.module.css"
 import skillsData from "../data/skills.json"
 import { Language } from '@mui/icons-material'
+import { Element } from 'react-scroll'
 
 const Skills: NextPage = () => {
-    console.log(skillsData)
+    
     return (
-        <Container className={styles.container}>
+        <Container id='skills' className={styles.container}>
             <Box className={styles.headerContainer}>
                 <h2 className={styles.header}>Skills</h2>
             </Box>

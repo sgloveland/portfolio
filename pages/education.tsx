@@ -6,7 +6,7 @@ import styles from "../styles/Education.module.css"
 
 const Education: NextPage = () => {
     return (
-        <Container className={styles.container}>
+        <Container id="education" className={styles.container}>
             <Box className={styles.headerContainer}>
                 <h2 className={styles.header}>Education</h2>
             </Box>

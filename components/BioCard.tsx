@@ -11,6 +11,7 @@ const BioCard: NextComponentType = () => {
     return (
         <ThemeProvider theme={theme}>
             <Container
+            id="about"
             className={styles.container}
             sx={{
                 backgroundColor: "backdrop.default",

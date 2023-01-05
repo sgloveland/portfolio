@@ -6,7 +6,7 @@ import styles from "../styles/Project.module.css"
 
 const Project: NextPage = () => {
     return (
-        <Container className={styles.container}>
+        <Container id="projects" className={styles.container}>
             <Box className={styles.headerContainer}>
                 <h2 className={styles.header}>Projects</h2>
             </Box>

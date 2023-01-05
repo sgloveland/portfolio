@@ -6,7 +6,7 @@ import styles from "../styles/Experience.module.css";
 
 const Experience: NextPage = () => {
     return (
-        <Container className={styles.container}>
+        <Container id="experience" className={styles.container}>
             <Box className={styles.headerContainer}>
                 <h2 className={styles.header}>Experience</h2>
             </Box>
