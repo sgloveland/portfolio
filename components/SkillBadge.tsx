@@ -15,7 +15,7 @@ const SkillBadge = ({name, image} : SkillBadgeProps) => {
             <Container className={styles.container} sx={{backgroundColor: "black"}}>
                 <Box className={styles.imageContainer}>
                     <div className={styles.image}>
-                        <Image src={image} layout="fill" objectFit='cover'/>
+                        <Image src={image} layout="fill" objectFit="contain"/>
                     </div>
                 </Box>
                 <Box className={styles.textContainer}>

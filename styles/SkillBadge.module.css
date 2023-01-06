@@ -13,7 +13,7 @@
 
 .imageContainer {
     flex: 1;
-    margin-right: 1%;
+    position: relative;
     /* background-color: black; */
 }
 
@@ -26,5 +26,5 @@
 .textContainer {
     flex: 2;
     text-align: center;
-    padding: 2%;
+    padding: 0;
 }
