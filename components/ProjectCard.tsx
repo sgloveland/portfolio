@@ -7,8 +7,8 @@ interface ProjectCardProps {
     name: string;
     date: string;
     description: string;
-    link: string | undefined;
-    demo: string | undefined;
+    link?: string | undefined;
+    demo?: string | undefined;
     skills: Array<string>;
 }
 
@@ -28,7 +28,7 @@ const ProjectCard = ({name, date, description, link, skills, demo}: ProjectCardP
 
                 <Box className={styles.skillsContainer}>
                     {skills.map((item) => (
-                        <Badge variant="standard" sx={{backgroundColor: "orange.darkest", borderRadius: 5, paddingBlock: 1, paddingInline: 2, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
+                        <Badge variant="standard" sx={{backgroundColor: "orange.darkest", borderRadius: 5, paddingBlock: 1, paddingInline: 1.5, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
                             {item}
                         </Badge>
                     ))}

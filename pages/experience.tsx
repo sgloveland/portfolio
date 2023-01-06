@@ -13,7 +13,7 @@ const Experience: NextPage = () => {
 
             <Box className={styles.content}>
                 {ExperienceData.map((experience) => (
-                    <ExperienceCard title={experience.title} position={experience.position} date={experience.date} description={experience.description} image={experience.image}/>
+                    <ExperienceCard title={experience.title} position={experience.position} date={experience.date} description={experience.description} image={experience.image} link={experience.link}/>
                 ))}
             </Box>
         </Container>
