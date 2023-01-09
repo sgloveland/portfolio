@@ -5,6 +5,7 @@ import { ThemeProvider} from '@mui/system'
 import theme from '../util/theme'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import EmailIcon from '@mui/icons-material/Email';
 import styles from "../styles/BioCard.module.css"
 
 const BioCard: NextComponentType = () => {
@@ -20,28 +21,25 @@ const BioCard: NextComponentType = () => {
                     <Image className={styles.image} src="/../public/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover"/>
                 </Box>
                 <Box className={styles.textContainer}>
-                    <p>Hi! My name is Sean Loveland. I am a software engineering major at UCI with a passion for building software that impacts people all around us!</p>
-                    <p>Outside of software, some of my hobbies include watching horror movies, playing the violin (I almost ended up playing professionally before switching to the software field), and learning anything and everything I can!</p>
-                    <Box sx={{color: "blue.light", textAlign: 'center'}}>
-                        <p>seangloveland@gmail.com</p>
-                    </Box>
+                    <p>Hi! My name is Sean Loveland. I am currently a senior studying Software Engineering at the University of California, Irvine.</p>
+                    <p>I have experience both in Mobile App development as well as in Web development. I am passionate about building software that positively impacts people all around us. If my qualifications match a role you have or if you'd like to get into contact, please feel free to reach out and connect! </p>
                     <Box 
                     className={styles.buttonContainer}>
-                        <Link href="https://github.com/sgloveland" variant={"button"}>
+                        <Link target="_blank" href="https://github.com/sgloveland" variant={"button"}>
                             <IconButton className={styles.iconButton}>
                                 <GitHubIcon sx={{color: "green.darkest"}}/>
                             </IconButton>
                         </Link>
-                        <Link href="https://www.linkedin.com/in/sean-g-loveland/" variant="button">
+                        <Link target="_blank" href="https://www.linkedin.com/in/sean-g-loveland/" variant="button">
                             <IconButton className={styles.iconButton}>
                                 <LinkedInIcon sx={{color: "green.darkest"}}/>
                             </IconButton>
                         </Link>
-                        {/* <Link href="https://www.instagram.com/sg_loveland/" variant="button">
+                        <Link target="_blank" href={`mailto:seangloveland@gmail.com`} variant="button">
                             <IconButton className={styles.iconButton}>
-                                <LinkedInIcon sx={{color: "green.darkest"}}/>
+                                <EmailIcon sx={{color: "green.darkest"}}/>
                             </IconButton>
-                        </Link> */}
+                        </Link>
                     </Box>
                 </Box>
             </Container>
