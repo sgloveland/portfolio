@@ -18,7 +18,7 @@ const BioCard: NextComponentType = () => {
                 backgroundColor: "backdrop.default",
             }}>
                 <Box className={styles.imageContainer}>
-                    <Image className={styles.image} src="/../public/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover" alt='A headshot photo of Sean Loveland'/>
+                    <Image className={styles.image} src="/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover" alt='A headshot photo of Sean Loveland'/>
                 </Box>
                 <Box className={styles.textContainer}>
                     <p>{"Hi! My name is Sean Loveland. I am currently a senior studying Software Engineering at the University of California, Irvine."}</p>

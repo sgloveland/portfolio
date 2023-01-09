@@ -4,7 +4,7 @@
         "position": "Full Stack Software Developer",
         "date": "June 2022 - November 2022",
         "description": "Worked with a small team of 6 developers to launch a feature-rich mobile application on the iOS App Store. I engineered major services such as Chat Messaging, Push Notifications, Analytics, and Dynamic Links using React Native Expo and Firebase.",
-        "image": "/../public/down.jpg",
+        "image": "/down.jpg",
         "link": "https://joindown.com/"
     }
 ]

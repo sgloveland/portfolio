@@ -2,85 +2,85 @@
     "languages": [
         {
             "name": "C++",
-            "photo": "/../public/cplusplus.png"
+            "photo": "/cplusplus.png"
         },
         {
             "name": "HTML",
-            "photo": "/../public/html-5.png"
+            "photo": "/html-5.png"
         },
         {
             "name": "CSS",
-            "photo": "/../public/css-3.png"
+            "photo": "/css-3.png"
         },
         {
             "name": "Javascript",
-            "photo": "/../public/javascript.png"
+            "photo": "/javascript.png"
         },
         {
             "name": "Typescript",
-            "photo": "/../public/typescript.png"
+            "photo": "/typescript.png"
         },
         {
             "name": "SQL",
-            "photo": "/../public/sql.png"
+            "photo": "/sql.png"
         },
         {
             "name": "Python",
-            "photo": "/../public/python.png"
+            "photo": "/python.png"
         },
         {
             "name": "Java",
-            "photo": "/../public/java.png"
+            "photo": "/java.png"
         }
     ],
     "frameworks": [
         {
             "name": "React",
-            "photo": "/../public/react.png"
+            "photo": "/react.png"
         },
         {
             "name": "React Native",
-            "photo": "/../public/react-native.png"
+            "photo": "/react-native.png"
         },
         {
             "name": "jQuery",
-            "photo": "/../public/jquery.png"
+            "photo": "/jquery.png"
         },
         {
             "name": "Next.js",
-            "photo": "/../public/next-js.png"
+            "photo": "/next-js.png"
         }
     ],
     "database": [
         {
             "name": "PostgreSQL",
-            "photo": "/../public/postgresql.png"
+            "photo": "/postgresql.png"
         },
         {
             "name": "MySQL",
-            "photo": "/../public/mysql.png"
+            "photo": "/mysql.png"
         }
     ],
     "tools": [
         {
             "name": "Git",
-            "photo": "/../public/git.png"
+            "photo": "/git.png"
         },
         {
             "name": "GitHub",
-            "photo": "/../public/github.png"
+            "photo": "/github.png"
         },
         {
             "name": "Expo",
-            "photo": "/../public/expo.png"
+            "photo": "/expo.png"
         },
         {
             "name": "Node.js",
-            "photo": "/../public/node-js.png"
+            "photo": "/node-js.png"
         },
         {
             "name": "Firebase",
-            "photo": "/../public/firebase.png"
+            "photo": "/firebase.png"
         }
     ]
 }
