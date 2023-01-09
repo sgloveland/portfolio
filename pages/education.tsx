@@ -12,8 +12,8 @@ const Education: NextPage = () => {
             </Box>
 
             <Box className={styles.content}>
-                {EduData.map((education) => (
-                    <EducationCard school={education.school} degree={education.degree} date={education.date} gpa={education.GPA}/>
+                {EduData.map((education, index) => (
+                    <EducationCard key={index} school={education.school} degree={education.degree} date={education.date} gpa={education.GPA}/>
                 ))}
             </Box>
         </Container>

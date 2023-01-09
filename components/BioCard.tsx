@@ -18,11 +18,11 @@ const BioCard: NextComponentType = () => {
                 backgroundColor: "backdrop.default",
             }}>
                 <Box className={styles.imageContainer}>
-                    <Image className={styles.image} src="/../public/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover"/>
+                    <Image className={styles.image} src="/../public/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover" alt='A headshot photo of Sean Loveland'/>
                 </Box>
                 <Box className={styles.textContainer}>
-                    <p>Hi! My name is Sean Loveland. I am currently a senior studying Software Engineering at the University of California, Irvine.</p>
-                    <p>I have experience both in Mobile App development as well as in Web development. I am passionate about building software that positively impacts people all around us. If my qualifications match a role you have or if you'd like to get into contact, please feel free to reach out and connect! </p>
+                    <p>{"Hi! My name is Sean Loveland. I am currently a senior studying Software Engineering at the University of California, Irvine."}</p>
+                    <p>{"I have experience both in Mobile App development as well as in Web development. I am passionate about building software that positively impacts people all around us. If my qualifications match a role you have or if you'd like to get into contact, please feel free to reach out and connect!"}</p>
                     <Box 
                     className={styles.buttonContainer}>
                         <Link target="_blank" href="https://github.com/sgloveland" variant={"button"}>

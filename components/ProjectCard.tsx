@@ -27,8 +27,8 @@ const ProjectCard = ({name, date, description, link, skills, demo}: ProjectCardP
                 </Box>
 
                 <Box className={styles.skillsContainer}>
-                    {skills.map((item) => (
-                        <Badge variant="standard" sx={{backgroundColor: "orange.darkest", borderRadius: 5, paddingBlock: 1, paddingInline: 1.5, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
+                    {skills.map((item, index) => (
+                        <Badge key={index} variant="standard" sx={{backgroundColor: "orange.darkest", borderRadius: 5, paddingBlock: 1, paddingInline: 1.5, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
                             {item}
                         </Badge>
                     ))}

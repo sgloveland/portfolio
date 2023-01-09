@@ -18,8 +18,8 @@ const Skills: NextPage = () => {
             <Box>
                 <h3 className={styles.subheader}>Languages</h3>
                 <Box className={styles.badgeContainer}>
-                    {skillsData.languages.map((language) => (
-                        <SkillBadge name={language.name} image={language.photo}/>
+                    {skillsData.languages.map((language, index) => (
+                        <SkillBadge key={index} name={language.name} image={language.photo}/>
                     ))}
                 </Box>
             </Box>
@@ -27,8 +27,8 @@ const Skills: NextPage = () => {
             <Box>
                 <h3 className={styles.subheader}>Frameworks</h3>
                 <Box className={styles.badgeContainer}>
-                    {skillsData.frameworks.map((language) => (
-                        <SkillBadge name={language.name} image={language.photo}/>
+                    {skillsData.frameworks.map((language, index) => (
+                        <SkillBadge key={index} name={language.name} image={language.photo}/>
                     ))}
                 </Box>
             </Box>
@@ -36,8 +36,8 @@ const Skills: NextPage = () => {
             <Box>
                 <h3 className={styles.subheader}>Database</h3>
                 <Box className={styles.badgeContainer}>
-                    {skillsData.database.map((language) => (
-                        <SkillBadge name={language.name} image={language.photo}/>
+                    {skillsData.database.map((language, index) => (
+                        <SkillBadge key={index} name={language.name} image={language.photo}/>
                     ))}
                 </Box>
             </Box>
@@ -45,8 +45,8 @@ const Skills: NextPage = () => {
             <Box>
                 <h3 className={styles.subheader}>Software & Tools</h3>
                 <Box className={styles.badgeContainer}>
-                    {skillsData.tools.map((language) => (
-                        <SkillBadge name={language.name} image={language.photo}/>
+                    {skillsData.tools.map((language, index) => (
+                        <SkillBadge key={index} name={language.name} image={language.photo}/>
                     ))}
                 </Box>
             </Box>
