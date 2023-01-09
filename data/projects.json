@@ -11,5 +11,25 @@
         "date" : "October 2022",
         "description": "Parsed over 8,000 #Runkeeper tweets to create a reporting tool on this data set. Also created data visualizations using Vega-lite and manipulated DOM using jQuery.",
         "skills": ["Typescript", "jQuery", "Vega-lite"]
+    },
+    {
+        "name": "Spotify Browser",
+        "date" : "October 2022",
+        "description": "Created a web app using Angular that communicates with the Spotify API. Users can log into their Spotify accounts, then search for artists, albums, or tracks. They can also see additional information about the search results and navigate to appropriate pages on Spotify.",
+        "skills": ["Typescript", "Angular", "Spotify API"]
+    },
+    {
+        "name": "Sleep Tracker",
+        "date" : "November 2022",
+        "description": "Designed and built a Cross-Platform Progressive Web App using Angular and Ionic. This app allows users to log overnight sleep as well as their sleepiness level based on the Stanford Sleepiness Scale.",
+        "skills": ["Typescript", "Angular", "Ionic"],
+        "demo": "https://youtu.be/FPTZin2OLo4"
+    },
+    {
+        "name": "Classical Accessibility",
+        "date" : "December 2022",
+        "description": "Created a simple web app to allow users to learn about classical music. However, this web app utilizes Handtrack.js to track users' hands which allows for users to navigate this web app almost exclusively through the use of gestures.",
+        "skills": ["Typescript", "Angular", "Handtrack.js"],
+        "demo": "https://youtu.be/qC9nWydlBLE"
     }
 ]

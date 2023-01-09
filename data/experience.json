@@ -3,7 +3,8 @@
         "title": "Down Groups",
         "position": "Full Stack Software Developer",
         "date": "June 2022 - November 2022",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta minus molestiae vel beatae natus eveniet ratione temporibus aperiam harum alias officiis assumenda officia quibusdam deleniti eos cupiditate dolore doloribus!",
-        "image": "/../public/down.jpg"
+        "description": "Worked with a small team of 6 developers to launch a feature-rich mobile application on the iOS App Store. I engineered major services such as Chat Messaging, Push Notifications, Analytics, and Dynamic Links using React Native Expo and Firebase.",
+        "image": "/../public/down.jpg",
+        "link": "https://joindown.com/"
     }
 ]
