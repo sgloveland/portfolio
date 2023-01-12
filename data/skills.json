@@ -43,6 +43,10 @@
             "photo": "/react-native.png"
         },
         {
+            "name": "Angular",
+            "photo": "/angular.png"
+        },
+        {
             "name": "jQuery",
             "photo": "/jquery.png"
         },
