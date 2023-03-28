@@ -1,15 +1,30 @@
+import {useRef, useState, useEffect, MutableRefObject} from 'react'
 import { Container, Box } from '@mui/material'
 import type {NextPage} from 'next'
 import SkillBadge from '../components/SkillBadge'
 import styles from "../styles/Skills.module.css"
 import skillsData from "../data/skills.json"
-import { Language } from '@mui/icons-material'
-import { Element } from 'react-scroll'
 
 const Skills: NextPage = () => {
+    const [isVisible, setIsVisible] = useState(false)
+    const skillRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            console.log(entries)
+            if(entries[0].isIntersecting) {
+                setIsVisible(true)
+                observer.unobserve(skillRef?.current as HTMLDivElement)
+            }
+        })
+
+        observer.observe(skillRef?.current as HTMLDivElement);
+    
+        return () => observer.disconnect();
+    }, [])
     
     return (
-        <Container id='skills' className={styles.container}>
+        <Container id='skills' className={`${styles.container} ${isVisible ? styles.isVisible : null}`} ref={skillRef} style={{visibility: isVisible ? 'visible': undefined}}>
             <Box className={styles.headerContainer}>
                 <h2 className={styles.header}>Skills</h2>
             </Box>

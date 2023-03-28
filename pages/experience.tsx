@@ -1,3 +1,4 @@
+import {useRef, useState, useEffect} from 'react'
 import { Container, Box } from '@mui/material';
 import type {NextPage} from 'next';
 import ExperienceCard from '../components/ExperienceCard';
@@ -5,8 +6,24 @@ import ExperienceData from "../data/experience.json";
 import styles from "../styles/Experience.module.css";
 
 const Experience: NextPage = () => {
+    const [isVisible, setIsVisible] = useState(false)
+    const experienceRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            if(entries[0].isIntersecting) {
+                setIsVisible(true)
+                observer.unobserve(experienceRef?.current as HTMLDivElement)
+            }
+        })
+
+        observer.observe(experienceRef?.current as HTMLDivElement)
+
+        return () => observer.disconnect()
+    }, [])
+
     return (
-        <Container id="experience" className={styles.container}>
+        <Container id="experience" className={`${styles.container} ${isVisible ? styles.isVisible : ''}`} ref={experienceRef}>
             <Box className={styles.headerContainer}>
                 <h2 className={styles.header}>Experience</h2>
             </Box>

@@ -1,4 +1,13 @@
 .container {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.isVisible {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
     display: flex;
     flex-direction: column;
 }

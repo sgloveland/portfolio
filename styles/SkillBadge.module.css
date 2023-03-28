@@ -7,14 +7,11 @@
     border-radius: 10px;
     border: 2px solid #173CAB;
     overflow: hidden;
-    margin-bottom: 2%;
-    /* justify-content: flex-start; */
 }
 
 .imageContainer {
     flex: 1;
     position: relative;
-    /* background-color: black; */
 }
 
 .image {

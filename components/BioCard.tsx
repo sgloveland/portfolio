@@ -1,3 +1,4 @@
+import {useRef, useState, useEffect} from 'react'
 import { Box, Container, IconButton, Link } from '@mui/material'
 import type { NextComponentType } from 'next'
 import Image from 'next/image'
@@ -9,14 +10,33 @@ import EmailIcon from '@mui/icons-material/Email';
 import styles from "../styles/BioCard.module.css"
 
 const BioCard: NextComponentType = () => {
+    const [isVisible, setIsVisible] = useState(false)
+    const bioRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            if(entries[0].isIntersecting) {
+                setIsVisible(true)
+                observer.unobserve(bioRef?.current as HTMLDivElement)
+            }
+        })
+
+        observer.observe(bioRef?.current as HTMLDivElement)
+
+        return () => observer.disconnect();
+    })
+
+
     return (
         <ThemeProvider theme={theme}>
             <Container
             id="about"
-            className={styles.container}
+            className={`${styles.container} ${isVisible ? styles.isVisible: ''}`}
             sx={{
                 backgroundColor: "backdrop.default",
-            }}>
+            }}
+            ref={bioRef}
+            >
                 <Box className={styles.imageContainer}>
                     <Image className={styles.image} src="/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover" alt='A headshot photo of Sean Loveland'/>
                 </Box>
@@ -26,9 +46,9 @@ const BioCard: NextComponentType = () => {
                     <Box 
                     className={styles.buttonContainer}>
                         <Link target="_blank" href="https://github.com/sgloveland" variant={"button"}>
-                            <IconButton className={styles.iconButton}>
-                                <GitHubIcon sx={{color: "green.darkest"}}/>
-                            </IconButton>
+                                <IconButton className={styles.iconButton}>
+                                    <GitHubIcon sx={{color: "green.darkest"}}/>
+                                </IconButton>
                         </Link>
                         <Link target="_blank" href="https://www.linkedin.com/in/sean-g-loveland/" variant="button">
                             <IconButton className={styles.iconButton}>
