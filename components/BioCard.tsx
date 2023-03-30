@@ -15,7 +15,7 @@ const BioCard: NextComponentType = () => {
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
-            if(entries[0].isIntersecting) {
+            if(entries[0].isIntersecting|| (entries.length > 1 && entries[1].isIntersecting)) {
                 setIsVisible(true)
                 observer.unobserve(bioRef?.current as HTMLDivElement)
             }
@@ -47,17 +47,17 @@ const BioCard: NextComponentType = () => {
                     className={styles.buttonContainer}>
                         <Link target="_blank" href="https://github.com/sgloveland" variant={"button"}>
                                 <IconButton className={styles.iconButton}>
-                                    <GitHubIcon sx={{color: "green.darkest"}}/>
+                                    <GitHubIcon sx={{color: "#4CAF50"}}/>
                                 </IconButton>
                         </Link>
                         <Link target="_blank" href="https://www.linkedin.com/in/sean-g-loveland/" variant="button">
                             <IconButton className={styles.iconButton}>
-                                <LinkedInIcon sx={{color: "green.darkest"}}/>
+                                <LinkedInIcon sx={{color: "#4CAF50"}}/>
                             </IconButton>
                         </Link>
                         <Link target="_blank" href={`mailto:seangloveland@gmail.com`} variant="button">
                             <IconButton className={styles.iconButton}>
-                                <EmailIcon sx={{color: "green.darkest"}}/>
+                                <EmailIcon sx={{color: "#4CAF50"}}/>
                             </IconButton>
                         </Link>
                     </Box>

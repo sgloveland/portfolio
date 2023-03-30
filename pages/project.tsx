@@ -11,7 +11,7 @@ const Project: NextPage = () => {
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
-            if(entries[0].isIntersecting) {
+            if(entries[0].isIntersecting || (entries.length > 1 && entries[1].isIntersecting)) {
                 setIsVisible(true)
                 observer.unobserve(projectRef?.current as HTMLDivElement)
             }

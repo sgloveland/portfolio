@@ -1,36 +1,19 @@
-.listContainer {
-    width: 250px;
-}
-
-.list {
-    padding: 0;
-    margin: 0;
-}
-
-.name {
-    margin: 0 auto;
-}
-
-.nameText {
-    padding: 0;
-    margin: 0;
-    color: white;
-}
-
-.buttonText {
-    font-size: 24px;
-    margin-left: 10px;
-}
-
-.button {
+.container {
     width: 100%;
-    padding-block: 10%;
-
-
-    transition-duration: 200ms;
 }
 
-.button:hover {
-    cursor: pointer;
-    background-color: #FD7C05;
+.container h1 {
+    padding: 0;
+    margin: 0;
+    padding-top: 1%;
+    text-align: center;
+}
+
+.buttonContainer {
+    padding-block: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 20px;
 }

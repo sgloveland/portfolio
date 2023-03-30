@@ -30,7 +30,7 @@ const ExperienceCard = ({title, position, date, description, image, link}: Exper
                 </CardContent>
                 {link && (
                 <CardActions className={styles.buttonContainer}>
-                    <Button target="_blank" size='small' className={styles.button} sx={{backgroundColor: "green.darkest", color: "backdrop.light" ,marginLeft: "2%"}} href={link}>Visit Website</Button>
+                    <Button target="_blank" size='small' className={styles.button} href={link}>Visit Website</Button>
                 </CardActions>
                 )}
             </Card>

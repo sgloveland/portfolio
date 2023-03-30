@@ -28,7 +28,7 @@ const ProjectCard = ({name, date, description, link, skills, demo}: ProjectCardP
 
                 <Box className={styles.skillsContainer}>
                     {skills.map((item, index) => (
-                        <Badge key={index} variant="standard" sx={{backgroundColor: "orange.darkest", borderRadius: 5, paddingBlock: 1, paddingInline: 1.5, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
+                        <Badge key={index} variant="standard" sx={{backgroundColor: "#d35400", borderRadius: 5, paddingBlock: 1, paddingInline: 1.5, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
                             {item}
                         </Badge>
                     ))}
@@ -36,13 +36,13 @@ const ProjectCard = ({name, date, description, link, skills, demo}: ProjectCardP
 
                 {link && (
                     <Box className={styles.actionContainer}>
-                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} target="_blank" href={link} variant='text' size='small'>View Repository</Button>
+                        <Button className={styles.button} target="_blank" href={link} variant='text' size='small'>View Repository</Button>
                     </Box>
                 )}
 
                 {demo && (
                     <Box className={styles.actionContainer}>
-                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} target="_blank" href={demo} variant='text' size='small'>Watch Demo</Button>
+                        <Button className={styles.button} target="_blank" href={demo} variant='text' size='small'>Watch Demo</Button>
                     </Box>
                 )}
             </Container>

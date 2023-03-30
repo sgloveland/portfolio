@@ -43,9 +43,10 @@
 .button {
     color: white;
     font-size: 12px;
+    background-color: #4CAF50;
 }
 
 .button:hover {
-    background-color: #006E08;
+    background-color: #3c8a3e;
     color: rgb(193, 193, 193);
 }

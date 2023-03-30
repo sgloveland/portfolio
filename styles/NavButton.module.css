@@ -1,0 +1,16 @@
+.button {
+    border-color: #173CAB;
+    color: #173CAB;
+    transition: 0.2s ease-in;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    color: #f73859;
+    border-color: #f73859;
+}
+
+.active {
+    color: #f73859;
+    border-color: #f73859;
+}
