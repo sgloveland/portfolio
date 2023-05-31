@@ -2,7 +2,7 @@ import { Button, Card, CardActions, CardContent, CardMedia } from '@mui/material
 import Image from 'next/image'
 import { ThemeProvider} from '@mui/system'
 import theme from '../util/theme'
-import styles from "../styles/ExperienceCard.module.css"
+import styles from "../styles/components/ExperienceCard.module.css"
 
 interface ExperienceCardProps {
     title: string

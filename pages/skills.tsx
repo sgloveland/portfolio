@@ -2,7 +2,7 @@ import {useRef, useState, useEffect, MutableRefObject} from 'react'
 import { Container, Box } from '@mui/material'
 import type {NextPage} from 'next'
 import SkillBadge from '../components/SkillBadge'
-import styles from "../styles/Skills.module.css"
+import styles from "../styles/screens/Skills.module.css"
 import skillsData from "../data/skills.json"
 
 const Skills: NextPage = () => {

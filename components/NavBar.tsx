@@ -3,7 +3,7 @@ import {AppBar, Box, Button, Container, Drawer, IconButton, List, ListItem, List
 import { ThemeProvider } from '@mui/system'
 import NextLink from "next/link"
 import theme from "../util/theme"
-import styles from '../styles/NavBar.module.css'
+import styles from '../styles/components/NavBar.module.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import {Link} from 'react-scroll'
 

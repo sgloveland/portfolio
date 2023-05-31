@@ -1,0 +1,33 @@
+.buttonContainer {
+    margin-top: 4%;
+    display: flex;
+    column-gap: 20px;
+}
+
+.button {
+    color: #00FF00;
+    border: 1px solid #00FF00
+}
+
+.button:hover {
+    background-color: #00FF00;
+    color: #000000;
+    border-color: #00FF00
+}
+
+.activeButton {
+    background-color: #00FF00;
+    color: #000000;
+    border-color: #00FF00
+}
+
+.activeButton:hover {
+    background-color: #00FF00;
+    color: #000000;
+    border-color: #00FF00
+}
+
+.carouselContainer {
+    padding-top: 3%;
+    display: flex;
+}

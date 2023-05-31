@@ -1,6 +1,6 @@
 import { Container, Box, } from "@mui/material";
 import Image from 'next/image'
-import styles from '../styles/HeadlineCard.module.css'
+import styles from '../styles/components/HeadlineCard.module.css'
 
 const HeadlineCard = () => {
     return (

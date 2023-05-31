@@ -1,7 +1,7 @@
 import {Box, Button, Container, Badge} from '@mui/material'
 import { ThemeProvider } from '@mui/system'
 import theme from "../util/theme"
-import styles from "../styles/ProjectCard.module.css"
+import styles from "../styles/components/ProjectCard.module.css"
 
 interface ProjectCardProps {
     name: string;

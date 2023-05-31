@@ -1,7 +1,7 @@
 import { Box, ThemeProvider } from "@mui/material"
 import Image from "next/image"
 import theme from "../util/theme"
-import styles from "../styles/SkillBadge.module.css"
+import styles from "../styles/components/SkillBadge.module.css"
 import { Container } from "@mui/system"
 
 interface SkillBadgeProps {

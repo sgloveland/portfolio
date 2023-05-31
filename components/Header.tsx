@@ -1,16 +1,24 @@
+import {useState} from 'react'
 import { Button, Box, Container, Link, IconButton, Divider } from "@mui/material"
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import EmailIcon from '@mui/icons-material/Email';
-import styles from '../styles/Header.module.css'
+import styles from '../styles/components/Header.module.css'
 
-const Header = () => {
+type HeaderProps = {
+    activeIndex: number
+    onChange: (value: number) => void
+}
+
+const Header = (props: HeaderProps) => {
+    const {activeIndex, onChange} = props
+
     return (
         <Container className={styles.container}>
             <Box className={styles.navButtonContainer}>
-                <Button variant="outlined" className={styles.navButton}>Home</Button>
-                <Button variant="outlined" className={styles.navButton}>About</Button>
-                <Button variant="outlined" className={styles.navButton}>Resume</Button>
+                <Button variant="outlined" className={`${activeIndex === 0 ? styles.activeNavButton : styles.navButton}`} onClick={() => onChange(0)}>Home</Button>
+                <Button variant="outlined" className={`${activeIndex === 1 ? styles.activeNavButton : styles.navButton}`} onClick={() => onChange(1)}>About</Button>
+                <Button variant="outlined" className={`${activeIndex === 2 ? styles.activeNavButton : styles.navButton}`} onClick={() => onChange(2)}>Resume</Button>
             </Box>
             <Box className={styles.iconContainer}>
                 <Link target="_blank" href="https://github.com/sgloveland" variant={"button"}>

@@ -1,7 +1,7 @@
 import {Box} from '@mui/material'
 import { ThemeProvider } from '@mui/system'
 import theme from "../util/theme"
-import styles from "../styles/EducationCard.module.css"
+import styles from "../styles/components/EducationCard.module.css"
 
 interface EducationCardProps {
     school: string

@@ -3,7 +3,7 @@ import { Container, Box } from '@mui/material'
 import type {NextPage} from 'next'
 import EducationCard from '../components/EducationCard'
 import EduData from "../data/education.json"
-import styles from "../styles/Education.module.css"
+import styles from "../styles/screens/Education.module.css"
 
 const Education: NextPage = () => {
     const [isVisible, setIsVisible] = useState(false)
