@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { useState } from 'react'
+import { useState, useEffect, CSSProperties, ReactElement } from 'react'
 import Head from 'next/head'
 import styles from '../styles/screens/Home.module.css'
 
@@ -8,31 +8,39 @@ import Education from './education'
 import Skills from './skills'
 import Project from './project'
 import BioCard from '../components/BioCard'
-import { NavBar } from '../components/NavBar'
+import { useTransition, animated, AnimatedProps, useSpringRef } from '@react-spring/web'
+
 import Landing from './Landing'
 import Header from '../components/Header'
 import Resume from './resume'
 
+const pages: ((props: AnimatedProps<{style: CSSProperties}>) => ReactElement)[] = [
+  ({style}) => <animated.div style={{...style}}><Landing /></animated.div>,
+  ({style}) => 
+  <animated.div style={{...style}}>
+    <BioCard/>
+    <Skills/>
+    <Education/>
+  </animated.div>,
+  ({style}) => <animated.div style={{...style}}><Resume /></animated.div>,
+]
 
 const Home: NextPage = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0)
+  const transRef = useSpringRef()
+  const transitions = useTransition(activeIndex, {
+    ref: transRef,
+    keys: null,
+    exitBeforeEnter: true,
+    from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
+    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
+    leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
+  })
 
-  const renderPage = () => {
-    switch(activeIndex) {
-      case 0:
-        return <Landing/>
-      case 1: 
-        return (
-          <>
-            <BioCard/>
-            <Skills/>
-            <Education/>
-          </>
-        )
-      case 2: 
-        return <Resume />
-    }
-  }
+  useEffect(() => {
+    transRef.start()
+  }, [activeIndex])
+
   return (
     <div className={styles.container}>
       <Head>
@@ -41,7 +49,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="profile.jpg" />
       </Head>
       <Header  activeIndex={activeIndex} onChange={(value) => setActiveIndex(value)}/>
-      {renderPage()}
+      {transitions((style, i) => {
+        const Page = pages[i]
+        return <Page style={style}/>
+      })}
 
       {/* <NavBar />
       <BioCard />

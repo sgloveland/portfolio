@@ -6,25 +6,9 @@ import styles from "../styles/screens/Skills.module.css"
 import skillsData from "../data/skills.json"
 
 const Skills: NextPage = () => {
-    const [isVisible, setIsVisible] = useState(false)
-    const skillRef = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            console.log(entries)
-            if(entries[0].isIntersecting) {
-                setIsVisible(true)
-                observer.unobserve(skillRef?.current as HTMLDivElement)
-            }
-        })
-
-        observer.observe(skillRef?.current as HTMLDivElement);
-    
-        return () => observer.disconnect();
-    }, [])
     
     return (
-        <Container id='skills' className={`${styles.container} ${isVisible ? styles.isVisible : null}`} ref={skillRef} style={{visibility: isVisible ? 'visible': undefined}}>
+        <Container id='skills' className={`${styles.container} ${ styles.isVisible}`}>
             <Box className={styles.headerContainer}>
                 <h2 className={styles.header}>Skills</h2>
             </Box>
