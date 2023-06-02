@@ -4,17 +4,14 @@ import theme from "../util/theme"
 import styles from "../styles/components/ProjectCard.module.css"
 import Link from 'next/link';
 
-interface ProjectCardProps {
+interface DesignCardProps {
     name: string;
     date: string;
     description: string;
-    link?: string | undefined;
-    demo?: string | undefined;
     skills: Array<string>;
 }
 
-const ProjectCard = ({name, date, description, link, skills, demo}: ProjectCardProps) => {
-    // const sampleData = ["React Native", "Expo", "Typescript", "C++", "jQuery", "Next.js", "Alright"]
+const DesignCard = ({name, date, description, skills}: DesignCardProps) => {
     return (
         <ThemeProvider theme={theme}>
             <Container className={styles.container} sx={{backgroundColor: "backdrop.default"}}>
@@ -34,21 +31,12 @@ const ProjectCard = ({name, date, description, link, skills, demo}: ProjectCardP
                         </Badge>
                     ))}
                 </Box>
-
-                {link && (
-                    <Box className={styles.actionContainer}>
-                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} target="_blank" href={link} variant='text' size='small'>View Repository</Button>
-                    </Box>
-                )}
-
-                {demo && (
-                    <Box className={styles.actionContainer}>
-                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} target="_blank" href={demo} variant='text' size='small'>Watch Demo</Button>
-                    </Box>
-                )}
+                <Box className={styles.actionContainer}>
+                    <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} href={"/project-details/PathwayPals"} variant='text' size='small'>Learn More</Button>
+                </Box>
             </Container>
         </ThemeProvider>
     )
 }
 
-export default ProjectCard;
+export default DesignCard;

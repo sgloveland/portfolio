@@ -1,0 +1,51 @@
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 2%;
+}
+
+.header {
+    background-color: #000000;
+    margin-inline: 5%;
+}
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
+}
+.title {
+}
+
+.handicap {
+    font-size: 64px;
+}
+
+.personaContainer {
+    display: flex;
+    column-gap: 20px;
+}
+
+.content {
+    flex-direction: column;
+    padding-inline: 2%;
+    background-color:  #343434;
+    margin-inline: 5%;
+}
+
+.headerText {
+    color: #005983
+}
+
+.endButton {
+    display: flex;
+    flex: 1;
+    align-self: center;
+}

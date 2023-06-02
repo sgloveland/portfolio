@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    background-color: #21209C;
+    background-color: #065FF9;
     border-radius: 10px;
     padding-block: 2%;
 }
@@ -14,7 +14,7 @@
 }
 
 .name {
-    color: #00FF00;
+    color: #F9A006;
     font-size: 64px;
     margin: 0;
     padding: 0;
