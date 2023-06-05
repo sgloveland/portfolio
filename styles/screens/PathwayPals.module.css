@@ -50,7 +50,7 @@
 .content {
     flex-direction: column;
     padding-inline: 2%;
-    background-color:  #343434;
+    /* background-color:  #343434; */
     margin-inline: 5%;
 }
 
