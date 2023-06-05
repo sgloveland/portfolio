@@ -59,8 +59,10 @@
 }
 
 .endButton {
+    margin-block: 5%;
     display: flex;
     flex: 1;
     align-self: center;
-    color: #026a9b
+    color: #F9A006;
+    border: 1px solid #F9A006
 }

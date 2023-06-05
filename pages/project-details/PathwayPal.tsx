@@ -144,7 +144,7 @@ const PathwayPals = () => {
                     </li>
                 </ul>
                 <Box>
-                    <Button href="/" className={styles.endButton}>Return home</Button>
+                    <Button variant='outlined' href="/" className={styles.endButton}>Return home</Button>
                 </Box>
             </Box>
         </Container>
