@@ -5,26 +5,26 @@
 }
 
 .button {
-    color: #00FF00;
-    border: 1px solid #00FF00
+    color: #F1F1F1;
+    border: 1px solid #F1F1F1
 }
 
 .button:hover {
-    background-color: #00FF00;
+    background-color: #F1F1F1;
     color: #000000;
-    border-color: #00FF00
+    border-color: #F1F1F1
 }
 
 .activeButton {
-    background-color: #00FF00;
+    background-color: #F1F1F1;
     color: #000000;
-    border-color: #00FF00
+    border-color: #F1F1F1
 }
 
 .activeButton:hover {
-    background-color: #00FF00;
+    background-color: #F1F1F1;
     color: #000000;
-    border-color: #00FF00
+    border-color: #F1F1F1
 }
 
 .carouselContainer {

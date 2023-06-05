@@ -4,19 +4,7 @@
         "date": "June 2021",
         "description": "A C++ program to read a bitmap image and count the number of pixels that are specific RGB color values. Able to read over 700,000 pixels within roughly 3 seconds.",
         "link": "https://github.com/sgloveland/ColorCounter",
-        "skills": ["C++"]
-    },
-    {
-        "name": "Runkeeper Tweet Report",
-        "date" : "October 2022",
-        "description": "Parsed over 8,000 #Runkeeper tweets to create a reporting tool on this data set. Also created data visualizations using Vega-lite and manipulated DOM using jQuery.",
-        "skills": ["Typescript", "jQuery", "Vega-lite"]
-    },
-    {
-        "name": "Spotify Browser",
-        "date" : "October 2022",
-        "description": "Created a web app using Angular that communicates with the Spotify API. Users can log into their Spotify accounts, then search for artists, albums, or tracks. They can also see additional information about the search results and navigate to appropriate pages on Spotify.",
-        "skills": ["Typescript", "Angular", "Spotify API"]
+        "skills": ["C++", "STL", "Data Structures"]
     },
     {
         "name": "Sleep Tracker",

@@ -1,5 +1,13 @@
 [
     {
+        "title": "Odyssey",
+        "position": "Full Stack Software Developer",
+        "date": "January 2023 - Present",
+        "description": "Worked as a Full Stack Software Developer in a team of 5 as part of my senior capstone project. Odyssey is a travel booking cross platform mobile app built with React Native, Expo, and AWS. We anticipate releasing the first version of the app by Summer 2023!",
+        "image": "/odyssey.jpg",
+        "link": "https://odysseyapp.com/"
+    },
+    {
         "title": "Down Groups",
         "position": "Full Stack Software Developer",
         "date": "June 2022 - November 2022",

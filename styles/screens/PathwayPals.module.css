@@ -7,8 +7,16 @@
     margin-bottom: 2%;
 }
 
+.back {
+    position: absolute;
+}
+
+.backIcon {
+    font-size: 38px;
+}
+
 .header {
-    background-color: #000000;
+    background-color: #005983;
     margin-inline: 5%;
 }
 .titleContainer {
@@ -22,6 +30,10 @@
     justify-content: center;
 }
 .title {
+    text-align: center;
+    padding-block: 20px;
+    font-size: 48px;
+
 }
 
 .handicap {
@@ -30,7 +42,9 @@
 
 .personaContainer {
     display: flex;
-    column-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 25px;
 }
 
 .content {
@@ -41,11 +55,12 @@
 }
 
 .headerText {
-    color: #005983
+    color: #026a9b
 }
 
 .endButton {
     display: flex;
     flex: 1;
     align-self: center;
+    color: #026a9b
 }

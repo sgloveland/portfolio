@@ -8,11 +8,11 @@
 
 .button {
     margin-top: 25px;
-    background-color: #00FF00;
+    background-color: #F9A006;
     color: #000000;
 }
 
 .button:hover {
-    background-color: #00CC00;
+    background-color: #ca8105;
     color: #000000;
 }

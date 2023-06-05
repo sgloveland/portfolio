@@ -26,13 +26,13 @@ const DesignCard = ({name, date, description, skills}: DesignCardProps) => {
 
                 <Box className={styles.skillsContainer}>
                     {skills.map((item, index) => (
-                        <Badge key={index} variant="standard" sx={{backgroundColor: "orange.darkest", borderRadius: 5, paddingBlock: 1, paddingInline: 1.5, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
+                        <Badge key={index} variant="standard" sx={{backgroundColor: "#F9A006", borderRadius: 5, paddingBlock: 1, paddingInline: 1.5, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
                             {item}
                         </Badge>
                     ))}
                 </Box>
                 <Box className={styles.actionContainer}>
-                    <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} href={"/project-details/PathwayPals"} variant='text' size='small'>Learn More</Button>
+                    <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} href={"/project-details/PathwayPal"} variant='text' size='small'>Learn More</Button>
                 </Box>
             </Container>
         </ThemeProvider>

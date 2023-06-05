@@ -23,17 +23,17 @@ const Header = (props: HeaderProps) => {
             <Box className={styles.iconContainer}>
                 <Link target="_blank" href="https://github.com/sgloveland" variant={"button"}>
                     <IconButton className={styles.iconButton}>
-                        <GitHubIcon sx={{color: '#00FF00'}}/>
+                        <GitHubIcon sx={{color: '#065FF9'}}/>
                     </IconButton>
                 </Link>
                 <Link target="_blank" href="https://www.linkedin.com/in/sean-g-loveland/" variant="button">
                     <IconButton className={styles.iconButton}>
-                        <LinkedInIcon sx={{color: '#00FF00'}}/>
+                        <LinkedInIcon sx={{color: '#065FF9'}}/>
                     </IconButton>
                 </Link>
                 <Link target="_blank" href={`mailto:seangloveland@gmail.com`} variant="button">
                     <IconButton className={styles.iconButton}>
-                        <EmailIcon sx={{color: '#00FF00'}}/>
+                        <EmailIcon sx={{color: '#065FF9'}}/>
                     </IconButton>
                 </Link>
             </Box>
