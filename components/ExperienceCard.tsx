@@ -10,16 +10,17 @@ interface ExperienceCardProps {
     date: string
     description: string
     image: string
+    alt: string
     link?: string
 }
 
-const ExperienceCard = ({title, position, date, description, image, link}: ExperienceCardProps) => {
+const ExperienceCard = ({title, position, date, description, image, alt,  link}: ExperienceCardProps) => {
     return (
         <ThemeProvider theme={theme}>
             <Card variant="outlined" className={styles.card} sx={{backgroundColor: "backdrop.default"}}>
                 <CardMedia sx={{height: 140}}>
                     <div className={styles.image}>
-                        <Image src={image} layout="fill" objectFit='cover'/>
+                        <Image src={image} layout="fill" objectFit='cover' alt={alt}/>
                     </div>
                 </CardMedia>
                 <CardContent>

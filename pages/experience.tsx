@@ -26,7 +26,7 @@ const Experience: NextPage = () => {
         <Container id="experience" className={`${styles.container} ${isVisible ? styles.isVisible : ''}`} ref={experienceRef}>
             <Box className={styles.content}>
                 {ExperienceData.map((experience, index) => (
-                    <ExperienceCard key={index} title={experience.title} position={experience.position} date={experience.date} description={experience.description} image={experience.image} link={experience.link}/>
+                    <ExperienceCard key={index} title={experience.title} position={experience.position} date={experience.date} description={experience.description} alt={experience.alt} image={experience.image} link={experience.link}/>
                 ))}
             </Box>
         </Container>
