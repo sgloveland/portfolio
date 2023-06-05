@@ -21,17 +21,17 @@ const Header = (props: HeaderProps) => {
                 <Button variant="outlined" className={`${activeIndex === 2 ? styles.activeNavButton : styles.navButton}`} onClick={() => onChange(2)}>Resume</Button>
             </Box>
             <Box className={styles.iconContainer}>
-                <Link target="_blank" href="https://github.com/sgloveland" variant={"button"}>
+                <Link target="_blank" aria-label='Link to GitHub profile' href="https://github.com/sgloveland" variant={"button"}>
                     <IconButton aria-label='GitHub' className={styles.iconButton}>
                         <GitHubIcon sx={{color: '#065FF9'}}/>
                     </IconButton>
                 </Link>
-                <Link target="_blank" href="https://www.linkedin.com/in/sean-g-loveland/" variant="button">
+                <Link target="_blank" aria-label='Link to LinkedIn profile' href="https://www.linkedin.com/in/sean-g-loveland/" variant="button">
                     <IconButton aria-label='LinkedIn' className={styles.iconButton}>
                         <LinkedInIcon sx={{color: '#065FF9'}}/>
                     </IconButton>
                 </Link>
-                <Link target="_blank" href={`mailto:seangloveland@gmail.com`} variant="button">
+                <Link target="_blank" aria-label='Link to email Sean Loveland' href={`mailto:seangloveland@gmail.com`} variant="button">
                     <IconButton aria-label='Email' className={styles.iconButton}>
                         <EmailIcon sx={{color: '#065FF9'}}/>
                     </IconButton>
