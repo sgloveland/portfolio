@@ -66,3 +66,9 @@
     color: #F9A006;
     border: 1px solid #F9A006
 }
+
+.endButton:hover {
+    background-color: #F9A006;
+    color: #000000;
+    border: 1px solid #F9A006
+}
