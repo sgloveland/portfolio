@@ -1,54 +1,114 @@
 .container {
-    display: flex;
-    background-color: #065FF9;
-    border-radius: 10px;
-    padding-block: 2%;
+  display: flex;
+  background-color: #065ff9;
+  border-radius: 10px;
+  padding-block: 2%;
 }
 
 .infoContainer {
-    flex: 2;
-    display: flex;
-    padding-left: 2%;
-    flex-direction: column;
-    justify-content: space-evenly;
+  flex: 2;
+  display: flex;
+  padding-left: 2%;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .name {
-    color: #F1F1F1;
-    font-size: 64px;
-    margin: 0;
-    padding: 0;
+  color: #f1f1f1;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
 }
 
 .title {
-    font-size: 32px;
-    color: #F1F1F1;
-    margin: 0;
-    padding: 0;
+  font-size: 32px;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
 }
 
 .tech {
-    font-size: 24px;
-    color: #F1F1F1;
-    margin: 0;
-    padding: 0;
+  font-size: 24px;
+  color: #f1f1f1;
+  margin: 0;
+  padding: 0;
 }
 
 .imageContainer {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imageBackground {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    margin-block: 2%;
-    border: 5px solid black;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin-block: 2%;
+  border: 5px solid black;
 }
 
 .image {
-    border-radius: 100px;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-block: 3%;
+  }
+
+  .infoContainer {
+    align-items: center;
+  }
+
+  .imageContainer {
+    width: 150px;
+    height: 150px;
+    display: flex;
+  }
+
+  .imageBackground {
+    width: 150px;
+    height: 150px;
+  }
+
+  .name {
+    font-size: 32px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2%;
+  }
+
+  .title {
+    font-size: 24px;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3%;
+  }
+
+  .tech {
+    font-size: 16px;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .name {
+    font-size: 24px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .tech {
+    font-size: 14px;
+  }
 }

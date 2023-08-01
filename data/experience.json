@@ -1,20 +1,29 @@
 [
-    {
-        "title": "Odyssey",
-        "position": "Full Stack Software Developer",
-        "date": "January 2023 - Present",
-        "description": "Worked as a Full Stack Software Developer in a team of 5 as part of my senior capstone project. Odyssey is a travel booking cross platform mobile app built with React Native, Expo, and AWS. We anticipate releasing the first version of the app by Summer 2023!",
-        "image": "/odyssey.jpg",
-        "alt": "The Odyssey company logo.",
-        "link": "https://odysseyapp.com/"
-    },
-    {
-        "title": "Down Groups",
-        "position": "Full Stack Software Developer",
-        "date": "June 2022 - November 2022",
-        "description": "Worked with a small team of 6 developers to launch a feature-rich mobile application on the iOS App Store. I engineered major services such as Chat Messaging, Push Notifications, Analytics, and Dynamic Links using React Native Expo and Firebase.",
-        "image": "/down.jpg",
-        "alt": "An image of the Down app on the iOS App Store.",
-        "link": "https://joindown.com/"
-    }
+  {
+    "title": "LofiRain",
+    "position": "Founding Full Stack Engineer",
+    "date": "May 2023 - Present",
+    "description": "Worked in a team of 4 as a Full Stack Software Engineer. We launched a cross-platform mobile app that allows users to create and share AI bots, helping break down the knowledge barrier of LLMs and AI and making it more accessible to everyday people!",
+    "image": "/botmo.png",
+    "alt": "The Botmo Logo",
+    "link": "https://lofirain.app/"
+  },
+  {
+    "title": "Odyssey",
+    "position": "Full Stack Software Developer",
+    "date": "January 2023 - June 2023",
+    "description": "Worked as a Full Stack Software Developer in a team of 5 as part of my senior capstone project. Odyssey is a travel booking cross platform mobile app built with React Native, Expo, and AWS. We anticipate releasing the first version of the app by Summer 2023!",
+    "image": "/odyssey.jpg",
+    "alt": "The Odyssey company logo.",
+    "link": "https://odysseyapp.com/"
+  },
+  {
+    "title": "Down Groups",
+    "position": "Full Stack Software Developer",
+    "date": "June 2022 - November 2022",
+    "description": "Worked with a small team of 6 developers to launch a feature-rich mobile application on the iOS App Store. I engineered major services such as Chat Messaging, Push Notifications, Analytics, and Dynamic Links using React Native Expo and Firebase.",
+    "image": "/down.jpg",
+    "alt": "An image of the Down app on the iOS App Store.",
+    "link": "https://joindown.com/"
+  }
 ]

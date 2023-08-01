@@ -1,64 +1,123 @@
 .container {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    padding-block: 1%;
-    margin-bottom: 3%;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  padding-block: 1%;
+  margin-bottom: 3%;
 }
 
 .navButtonContainer {
-    display: flex;
-    flex: 1;
-    column-gap: 10px
+  display: flex;
+  flex: 1;
+  column-gap: 10px;
 }
 
 .navButton {
-    border-radius: 100px;
-    padding-inline: 3%;
-    margin: 0;
-    display: inline-block;
-    border-color: #F1F1F1;
-    color: #F1F1F1
+  border-radius: 100px;
+  padding-inline: 3%;
+  margin: 0;
+  display: inline-block;
+  border-color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .navButton:hover {
-    border-color: #F1F1F1;
-    background-color: #F1F1F1;
-    color: #000000;
+  border-color: #f1f1f1;
+  background-color: #f1f1f1;
+  color: #000000;
 }
 
 .activeNavButton {
-    border-radius: 100px;
-    padding-inline: 3%;
-    margin: 0;
-    display: inline-block;
-    border-color: #F1F1F1;
-    background-color: #F1F1F1;
-    color: #000000;
+  border-radius: 100px;
+  padding-inline: 3%;
+  margin: 0;
+  display: inline-block;
+  border-color: #f1f1f1;
+  background-color: #f1f1f1;
+  color: #000000;
 }
 
-.activeNavButton:HOVER {
-    border-color: #F1F1F1;
-    background-color: #F1F1F1;
-    color: #000000;
+.activeNavButton:hover {
+  border-color: #f1f1f1;
+  background-color: #f1f1f1;
+  color: #000000;
 }
 
 .iconContainer {
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    column-gap: 10px;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  column-gap: 10px;
 }
 
 .iconButton {
-    width: "100%";
-    height: "100%";
-    border-radius: 10%;
-    border: 2px solid #065FF9;
-    transition: 0.2s ease;
+  width: "100%";
+  height: "100%";
+  border-radius: 10%;
+  border: 2px solid #065ff9;
+  transition: 0.2s ease;
 }
 
 .iconButton:hover {
-    transform: scale(1.1);
-    background-color: #F1F1F1;
+  transform: scale(1.1);
+  background-color: #f1f1f1;
+}
+
+.drawer {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .navButtonContainer {
+    display: none;
+  }
+
+  .navButton {
+    display: none;
+  }
+  .container {
+    padding-top: 10px;
+  }
+
+  .drawer {
+    display: block;
+  }
+
+  .listContainer {
+    width: 250px;
+  }
+
+  .list {
+    padding: 0;
+    margin: 0;
+  }
+
+  .buttonText {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .button {
+    width: 100%;
+    padding-inline: 10%;
+    padding-block: 10%;
+    text-decoration: none;
+
+    transition-duration: 200ms;
+  }
+
+  .button:hover {
+    cursor: pointer;
+    background-color: #074fcb;
+  }
+
+  .name {
+    margin: 0 auto;
+  }
+
+  .nameText {
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
 }

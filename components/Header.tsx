@@ -1,44 +1,149 @@
-import {useState} from 'react'
-import { Button, Box, Container, Link, IconButton, Divider } from "@mui/material"
-import GitHubIcon from '@mui/icons-material/GitHub'
-import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import EmailIcon from '@mui/icons-material/Email';
-import styles from '../styles/components/Header.module.css'
+import { useState } from "react";
+import {
+  Button,
+  Box,
+  Container,
+  Link,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+} from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
+import styles from "../styles/components/Header.module.css";
+import MenuIcon from "@mui/icons-material/Menu";
 
 type HeaderProps = {
-    activeIndex: number
-    onChange: (value: number) => void
-}
+  activeIndex: number;
+  onChange: (value: number) => void;
+};
+
+const DrawerList = (props: any) => {
+  const { onToggle } = props;
+  return (
+    <Box className={styles.listContainer}>
+      <List className={styles.list}>
+        <ListItem disablePadding>
+          <Link onClick={() => onToggle(0)} className={styles.button}>
+            <p className={`${styles.nameText} ${styles.buttonText}`}>Skills</p>
+          </Link>
+        </ListItem>
+        <ListItem disablePadding>
+          <Link onClick={() => onToggle(1)} className={styles.button}>
+            <p className={`${styles.nameText} ${styles.buttonText}`}>
+              Experience
+            </p>
+          </Link>
+        </ListItem>
+        <ListItem disablePadding>
+          <Link onClick={() => onToggle(2)} className={styles.button}>
+            <p className={`${styles.nameText} ${styles.buttonText}`}>
+              Projects
+            </p>
+          </Link>
+        </ListItem>
+      </List>
+    </Box>
+  );
+};
 
 const Header = (props: HeaderProps) => {
-    const {activeIndex, onChange} = props
+  const { activeIndex, onChange } = props;
+  const [open, setOpen] = useState<boolean>(false);
 
-    return (
-        <Container className={styles.container}>
-            <Box className={styles.navButtonContainer}>
-                <Button variant="outlined" className={`${activeIndex === 0 ? styles.activeNavButton : styles.navButton}`} onClick={() => onChange(0)}>Home</Button>
-                <Button variant="outlined" className={`${activeIndex === 1 ? styles.activeNavButton : styles.navButton}`} onClick={() => onChange(1)}>About</Button>
-                <Button variant="outlined" className={`${activeIndex === 2 ? styles.activeNavButton : styles.navButton}`} onClick={() => onChange(2)}>Resume</Button>
-            </Box>
-            <Box className={styles.iconContainer}>
-                <Link target="_blank" aria-label='Link to GitHub profile' href="https://github.com/sgloveland" variant={"button"}>
-                    <IconButton aria-label='GitHub' className={styles.iconButton}>
-                        <GitHubIcon sx={{color: '#065FF9'}}/>
-                    </IconButton>
-                </Link>
-                <Link target="_blank" aria-label='Link to LinkedIn profile' href="https://www.linkedin.com/in/sean-g-loveland/" variant="button">
-                    <IconButton aria-label='LinkedIn' className={styles.iconButton}>
-                        <LinkedInIcon sx={{color: '#065FF9'}}/>
-                    </IconButton>
-                </Link>
-                <Link target="_blank" aria-label='Link to email Sean Loveland' href={`mailto:seangloveland@gmail.com`} variant="button">
-                    <IconButton aria-label='Email' className={styles.iconButton}>
-                        <EmailIcon sx={{color: '#065FF9'}}/>
-                    </IconButton>
-                </Link>
-            </Box>
-        </Container>
-    )
-}
+  const toggleDrawer = (open: boolean) => {
+    setOpen(open);
+  };
 
-export default Header
+  return (
+    <Container className={styles.container}>
+      <Box className={styles.navButtonContainer}>
+        <Button
+          variant="outlined"
+          className={`${
+            activeIndex === 0 ? styles.activeNavButton : styles.navButton
+          }`}
+          onClick={() => onChange(0)}
+        >
+          Home
+        </Button>
+        <Button
+          variant="outlined"
+          className={`${
+            activeIndex === 1 ? styles.activeNavButton : styles.navButton
+          }`}
+          onClick={() => onChange(1)}
+        >
+          About
+        </Button>
+        <Button
+          variant="outlined"
+          className={`${
+            activeIndex === 2 ? styles.activeNavButton : styles.navButton
+          }`}
+          onClick={() => onChange(2)}
+        >
+          Resume
+        </Button>
+      </Box>
+      <Box className={styles.drawer}>
+        <IconButton edge="start" onClick={() => toggleDrawer(true)}>
+          <MenuIcon sx={{ color: "white" }} />
+        </IconButton>
+        <Drawer
+          PaperProps={{
+            sx: {
+              backgroundColor: "#065ff9",
+            },
+          }}
+          anchor="left"
+          open={open}
+          onClose={() => toggleDrawer(false)}
+        >
+          <DrawerList
+            onToggle={(activeIndex: number) => {
+              toggleDrawer(false);
+              onChange(activeIndex);
+            }}
+          />
+        </Drawer>
+      </Box>
+      <Box className={styles.iconContainer}>
+        <Link
+          target="_blank"
+          aria-label="Link to GitHub profile"
+          href="https://github.com/sgloveland"
+          variant={"button"}
+        >
+          <IconButton aria-label="GitHub" className={styles.iconButton}>
+            <GitHubIcon sx={{ color: "#065FF9" }} />
+          </IconButton>
+        </Link>
+        <Link
+          target="_blank"
+          aria-label="Link to LinkedIn profile"
+          href="https://www.linkedin.com/in/sean-g-loveland/"
+          variant="button"
+        >
+          <IconButton aria-label="LinkedIn" className={styles.iconButton}>
+            <LinkedInIcon sx={{ color: "#065FF9" }} />
+          </IconButton>
+        </Link>
+        <Link
+          target="_blank"
+          aria-label="Link to email Sean Loveland"
+          href={`mailto:seangloveland@gmail.com`}
+          variant="button"
+        >
+          <IconButton aria-label="Email" className={styles.iconButton}>
+            <EmailIcon sx={{ color: "#065FF9" }} />
+          </IconButton>
+        </Link>
+      </Box>
+    </Container>
+  );
+};
+
+export default Header;
