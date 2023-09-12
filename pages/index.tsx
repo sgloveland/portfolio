@@ -2,25 +2,11 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { useState } from "react";
 import HeadlineCard from "../components/HeadlineCard";
 import ProjectPreviewCard from "../components/ProjectPreviewCard";
 import styles from "../styles/screens/Home.module.css";
-import Experience from "./about/(subscreens)/experience";
-import Project from "./about/(subscreens)/project";
 
 const Home: NextPage = () => {
-  const [cardIndex, setCardIndex] = useState<number>(0);
-
-  const renderTab = () => {
-    switch (cardIndex) {
-      case 0:
-        return <Experience />;
-      case 1:
-        return <Project />;
-    }
-  };
-
   return (
     <main className={styles.container}>
       <Head>
