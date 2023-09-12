@@ -1,29 +1,43 @@
 [
   {
-    "title": "LofiRain",
-    "position": "Founding Full Stack Engineer",
+    "name": "Botmo",
     "date": "May 2023 - Present",
     "description": "Worked in a team of 4 as a Full Stack Software Engineer. We launched a cross-platform mobile app that allows users to create and share AI bots, helping break down the knowledge barrier of LLMs and AI and making it more accessible to everyday people!",
-    "image": "/botmo.png",
-    "alt": "The Botmo Logo",
-    "link": "https://lofirain.app/"
+    "link": "https://lofirain.app/botmo",
+    "skills": [
+      "/react-native.png",
+      "/expo.png",
+      "/typescript.png",
+      "/firebase.png",
+      "/node-js.png"
+    ],
+    "image": "https://firebasestorage.googleapis.com/v0/b/botmo-28a0f.appspot.com/o/profilePictures%2Fprofile.png?alt=media&token=c2e7270c-427a-4e0b-907c-ad3dc279bbc7"
   },
   {
-    "title": "Odyssey",
-    "position": "Full Stack Software Developer",
+    "name": "Odyssey",
     "date": "January 2023 - June 2023",
     "description": "Worked as a Full Stack Software Developer in a team of 5 as part of my senior capstone project. Odyssey is a travel booking cross platform mobile app built with React Native, Expo, and AWS. We anticipate releasing the first version of the app by Summer 2023!",
-    "image": "/odyssey.jpg",
-    "alt": "The Odyssey company logo.",
-    "link": "https://odysseyapp.com/"
+    "link": "https://odysseyapp.com/",
+    "skills": [
+      "/react-native.png",
+      "/expo.png",
+      "/typescript.png",
+      "/node-js.png"
+    ],
+    "image": "/odyssey.png"
   },
   {
-    "title": "Down Groups",
-    "position": "Full Stack Software Developer",
+    "name": "Down Groups",
     "date": "June 2022 - November 2022",
     "description": "Worked with a small team of 6 developers to launch a feature-rich mobile application on the iOS App Store. I engineered major services such as Chat Messaging, Push Notifications, Analytics, and Dynamic Links using React Native Expo and Firebase.",
-    "image": "/down.jpg",
-    "alt": "An image of the Down app on the iOS App Store.",
-    "link": "https://joindown.com/"
+    "link": "https://joindown.com/",
+    "skills": [
+      "/react-native.png",
+      "/expo.png",
+      "/typescript.png",
+      "/firebase.png",
+      "/node-js.png"
+    ],
+    "image": "/down.png"
   }
 ]

@@ -1,0 +1,67 @@
+@keyframes slideIn {
+  0% {
+    top: 30px;
+  }
+  60% {
+    top: -5px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+.container {
+  animation: slideIn 0.5s;
+  position: relative;
+}
+
+.container:hover .image {
+  filter: blur(0px);
+  border: 2px solid #f1f1f1;
+  transform: scale(1.02);
+}
+
+.imageContainer {
+  position: relative;
+  width: 300px;
+  height: 175px;
+  z-index: -1;
+  padding: 2px;
+}
+
+.image {
+  object-fit: cover;
+  filter: blur(2px);
+  transition: 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+.content {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #26282a;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.label {
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .imageContainer {
+    width: 250px;
+    height: 150px;
+  }
+}

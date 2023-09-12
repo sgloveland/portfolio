@@ -1,22 +1,51 @@
-import { Container, Box, } from "@mui/material";
-import Image from 'next/image'
-import styles from '../styles/components/HeadlineCard.module.css'
+import { Box, Container } from "@mui/material";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
+import styles from "../styles/components/HeadlineCard.module.css";
 
 const HeadlineCard = () => {
-    return (
-        <Container className={styles.container}>
-            <Box className={styles.infoContainer}>
-                <h1 className={styles.name}>Sean Loveland</h1>
-                <h2 className={styles.title}>Full Stack Software Engineer</h2>
-                <h3 className={styles.tech}>React, React Native, Node, Express, AWS, GCP</h3>
-            </Box>
-            <Box className={styles.imageContainer}>
-                <Box className={styles.imageBackground}>
-                    <Image className={styles.image} src="/profile.jpg" layout='responsive' height={"100%"} width={"100%"} objectFit="cover" alt='A headshot photo of Sean Loveland'/>
-                </Box>
-            </Box>
-        </Container>
-    )
-}
+  const element = useRef(null);
 
-export default HeadlineCard
+  useEffect(() => {
+    const typingOptions = {
+      strings: [
+        "Problem Solver.",
+        "Technical Generalist.",
+        "Full Stack Engineer.",
+      ],
+      typeSpeed: 50,
+      backSpeed: 40,
+      loop: true,
+      showCursor: false,
+    };
+    const typed = new Typed(element.current, typingOptions);
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+  return (
+    <Container className={styles.container}>
+      <Image
+        className={styles.image}
+        src="/profile.jpg"
+        height={0}
+        width={0}
+        sizes="100vw"
+        style={{ width: "25%", height: "auto" }}
+        alt="A headshot photo of Sean Loveland"
+        priority
+      />
+      <Box className={styles.infoContainer}>
+        <h1 className={styles.name}>Hello! I'm Sean.</h1>
+        <h2 className={styles.title}>
+          I'm a <span ref={element}></span>
+        </h2>
+      </Box>
+    </Container>
+  );
+};
+
+export default HeadlineCard;

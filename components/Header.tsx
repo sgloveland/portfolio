@@ -1,47 +1,40 @@
-import { useState } from "react";
-import {
-  Button,
-  Box,
-  Container,
-  Link,
-  IconButton,
-  Drawer,
-  List,
-  ListItem,
-} from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-import styles from "../styles/components/Header.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Drawer, IconButton, List, ListItem } from "@mui/material";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import styles from "../styles/components/Header.module.css";
 
-type HeaderProps = {
-  activeIndex: number;
-  onChange: (value: number) => void;
-};
+type HeaderProps = {};
 
-const DrawerList = (props: any) => {
-  const { onToggle } = props;
+interface DrawerProps {
+  onPress: () => void;
+}
+const DrawerList = (props: DrawerProps) => {
+  const { onPress } = props;
   return (
     <Box className={styles.listContainer}>
       <List className={styles.list}>
         <ListItem disablePadding>
-          <Link onClick={() => onToggle(0)} className={styles.button}>
-            <p className={`${styles.nameText} ${styles.buttonText}`}>Skills</p>
+          <Link href="/" className={styles.button} onClick={onPress}>
+            <p className={`${styles.nameText} ${styles.buttonText}`}>Home</p>
           </Link>
         </ListItem>
         <ListItem disablePadding>
-          <Link onClick={() => onToggle(1)} className={styles.button}>
-            <p className={`${styles.nameText} ${styles.buttonText}`}>
-              Experience
-            </p>
+          <Link href="/about" className={styles.button} onClick={onPress}>
+            <p className={`${styles.nameText} ${styles.buttonText}`}>About</p>
           </Link>
         </ListItem>
         <ListItem disablePadding>
-          <Link onClick={() => onToggle(2)} className={styles.button}>
+          <Link href="/projects" className={styles.button} onClick={onPress}>
             <p className={`${styles.nameText} ${styles.buttonText}`}>
               Projects
             </p>
+          </Link>
+        </ListItem>
+        <ListItem disablePadding>
+          <Link href="/resume" className={styles.button} onClick={onPress}>
+            <p className={`${styles.nameText} ${styles.buttonText}`}>Resume</p>
           </Link>
         </ListItem>
       </List>
@@ -50,44 +43,71 @@ const DrawerList = (props: any) => {
 };
 
 const Header = (props: HeaderProps) => {
-  const { activeIndex, onChange } = props;
+  const [activeIndex, setActiveIndex] = useState<number>(0);
   const [open, setOpen] = useState<boolean>(false);
 
   const toggleDrawer = (open: boolean) => {
     setOpen(open);
   };
 
+  const pathname = usePathname();
+
+  useEffect(() => {
+    switch (pathname) {
+      case "/":
+        setActiveIndex(0);
+        break;
+      case "/about":
+        setActiveIndex(1);
+        break;
+      case "/projects":
+        setActiveIndex(2);
+        break;
+      case "/resume":
+        setActiveIndex(3);
+        break;
+    }
+  }, [pathname]);
+
   return (
-    <Container className={styles.container}>
-      <Box className={styles.navButtonContainer}>
-        <Button
-          variant="outlined"
+    <header className={styles.container}>
+      <Link href="/" className={styles.title}>
+        Sean Loveland
+      </Link>
+      <nav className={styles.navButtonContainer}>
+        <Link
+          href="/"
           className={`${
             activeIndex === 0 ? styles.activeNavButton : styles.navButton
           }`}
-          onClick={() => onChange(0)}
         >
           Home
-        </Button>
-        <Button
-          variant="outlined"
+        </Link>
+        <Link
+          href="/about"
           className={`${
             activeIndex === 1 ? styles.activeNavButton : styles.navButton
           }`}
-          onClick={() => onChange(1)}
         >
           About
-        </Button>
-        <Button
-          variant="outlined"
+        </Link>
+        <Link
+          href="/projects"
           className={`${
             activeIndex === 2 ? styles.activeNavButton : styles.navButton
           }`}
-          onClick={() => onChange(2)}
+        >
+          Projects
+        </Link>
+        <Link
+          href="/resume"
+          className={`${
+            activeIndex === 3 ? styles.activeNavButton : styles.navButton
+          }`}
         >
           Resume
-        </Button>
-      </Box>
+        </Link>
+      </nav>
       <Box className={styles.drawer}>
         <IconButton edge="start" onClick={() => toggleDrawer(true)}>
           <MenuIcon sx={{ color: "white" }} />
@@ -95,54 +115,17 @@ const Header = (props: HeaderProps) => {
         <Drawer
           PaperProps={{
             sx: {
-              backgroundColor: "#065ff9",
+              backgroundColor: "#222222",
             },
           }}
-          anchor="left"
+          anchor="right"
           open={open}
           onClose={() => toggleDrawer(false)}
         >
-          <DrawerList
-            onToggle={(activeIndex: number) => {
-              toggleDrawer(false);
-              onChange(activeIndex);
-            }}
-          />
+          <DrawerList onPress={() => toggleDrawer(false)} />
         </Drawer>
       </Box>
-      <Box className={styles.iconContainer}>
-        <Link
-          target="_blank"
-          aria-label="Link to GitHub profile"
-          href="https://github.com/sgloveland"
-          variant={"button"}
-        >
-          <IconButton aria-label="GitHub" className={styles.iconButton}>
-            <GitHubIcon sx={{ color: "#065FF9" }} />
-          </IconButton>
-        </Link>
-        <Link
-          target="_blank"
-          aria-label="Link to LinkedIn profile"
-          href="https://www.linkedin.com/in/sean-g-loveland/"
-          variant="button"
-        >
-          <IconButton aria-label="LinkedIn" className={styles.iconButton}>
-            <LinkedInIcon sx={{ color: "#065FF9" }} />
-          </IconButton>
-        </Link>
-        <Link
-          target="_blank"
-          aria-label="Link to email Sean Loveland"
-          href={`mailto:seangloveland@gmail.com`}
-          variant="button"
-        >
-          <IconButton aria-label="Email" className={styles.iconButton}>
-            <EmailIcon sx={{ color: "#065FF9" }} />
-          </IconButton>
-        </Link>
-      </Box>
-    </Container>
+    </header>
   );
 };
 

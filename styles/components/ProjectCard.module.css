@@ -1,63 +1,94 @@
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    top: 30px;
+  }
+  60% {
+    top: -5px;
+  }
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
 .container {
-    flex: 0 1 30%;
-    min-width: 275px;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 10px 15px;
+  position: relative;
+  width: 100%;
+  border: 3px solid #2f2f2f;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  animation: slideUp 0.6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  padding-inline: 2rem;
+  padding-block: 2rem;
 }
 
-.content {
-    text-align: center;
+.container:hover {
+  border: 3px solid #656464;
+  background-color: #222222;
+  cursor: pointer;
+  transform: scale(1.01);
 }
 
-.header {
-    text-align: center;
+.headingContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.skillsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-bottom: 5%;
-    flex-wrap: wrap;
+.title {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
 }
 
-.actionContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.date {
+  font-size: 1rem;
+  color: #656464;
+  padding: 0;
+  margin: 0;
 }
 
-.button {
-    color: white;
-    font-size: 12px;
+.description {
+  font-size: 1rem;
+  opacity: 0.7;
+  padding: 0;
+  margin: 0;
+  margin-block: 1.5rem;
 }
 
-.headerText {
-    margin-bottom: 2%;
-    font-size: 24px;
+.skillContainer {
+  display: flex;
+  column-gap: 10px;
 }
 
-.text {
-    padding: 0;
-    margin: 0;
+.skillImage {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
 }
 
-.italicText{
-    font-style: italic;
-    color: rgb(193, 193, 193);
-    font-size: 14px;
+.logo {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  min-width: 75px;
+  margin-left: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
-.paragraphText {
-    color: white;
-    margin-top: 5%;
+@media screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
 }
-
-.button:hover {
-    background-color: #006E08;
-    color: rgb(193, 193, 193);
-}
-
-
-

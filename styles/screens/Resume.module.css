@@ -1,18 +1,29 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .container {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 5%
+  display: flex;
+  flex: 1;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 5%;
+  animation: fadeIn 1.3s;
+  padding-inline: 10%;
 }
 
 .button {
-    margin-top: 25px;
-    background-color: #F9A006;
-    color: #000000;
+  margin-top: 25px;
+  background-color: #f9a006;
+  color: #000000;
 }
 
 .button:hover {
-    background-color: #ca8105;
-    color: #000000;
+  background-color: #ca8105;
+  color: #000000;
 }

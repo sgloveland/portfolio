@@ -1,54 +1,61 @@
-import {Box, Button, Container, Badge} from '@mui/material'
-import { ThemeProvider } from '@mui/system'
-import theme from "../util/theme"
-import styles from "../styles/components/ProjectCard.module.css"
-import Link from 'next/link';
+import { Box } from "@mui/material";
+import { ThemeProvider } from "@mui/system";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../styles/components/ProjectCard.module.css";
+import theme from "../util/theme";
 
 interface ProjectCardProps {
-    name: string;
-    date: string;
-    description: string;
-    link?: string | undefined;
-    demo?: string | undefined;
-    skills: Array<string>;
+  name: string;
+  date: string;
+  description: string;
+  image?: string;
+  link?: string | undefined;
+  demo?: string | undefined;
+  skills: Array<string>;
 }
 
-const ProjectCard = ({name, date, description, link, skills, demo}: ProjectCardProps) => {
-    // const sampleData = ["React Native", "Expo", "Typescript", "C++", "jQuery", "Next.js", "Alright"]
-    return (
-        <ThemeProvider theme={theme}>
-            <Container className={styles.container} sx={{backgroundColor: "backdrop.default"}}>
-                <Box className={styles.header}>
-                    <h2 className={styles.headerText}>{name}</h2>
-                    <p className={`${styles.text} ${styles.italicText}`}>{date}</p>
-                </Box>
-
-                <Box className={styles.content}>
-                    <p className={styles.paragraphText}>{description}</p>
-                </Box>
-
-                <Box className={styles.skillsContainer}>
-                    {skills.map((item, index) => (
-                        <Badge key={index} variant="standard" sx={{backgroundColor: "#F9A006", borderRadius: 5, paddingBlock: 1, paddingInline: 1.5, marginRight: "3%", marginBottom: "2%", fontSize: 14}}>
-                            {item}
-                        </Badge>
-                    ))}
-                </Box>
-
-                {link && (
-                    <Box className={styles.actionContainer}>
-                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} target="_blank" href={link} variant='text' size='small'>View Repository</Button>
-                    </Box>
-                )}
-
-                {demo && (
-                    <Box className={styles.actionContainer}>
-                        <Button className={styles.button} sx={{backgroundColor: "green.darkest"}} target="_blank" href={demo} variant='text' size='small'>Watch Demo</Button>
-                    </Box>
-                )}
-            </Container>
-        </ThemeProvider>
-    )
-}
+const ProjectCard = ({
+  name,
+  date,
+  description,
+  image,
+  link,
+  skills,
+  demo,
+}: ProjectCardProps) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <Link className={styles.container} href={link ?? "/projects"}>
+        {/* Main Content */}
+        <Box className={styles.content}>
+          <div className={styles.headingContainer}>
+            <h2 className={styles.title}>{name}</h2>
+            <p className={styles.date}>{date}</p>
+          </div>
+          <p className={styles.description}>{description}</p>
+          <div className={styles.skillContainer}>
+            {skills.map((skill, index) => (
+              <div className={styles.skillImage}>
+                <Image src={skill} fill alt="" />
+              </div>
+            ))}
+          </div>
+        </Box>
+        {image && (
+          <div className={styles.logo}>
+            <Image
+              src={image}
+              fill
+              sizes="100vw"
+              alt=""
+              style={{ objectFit: "contain" }}
+            />
+          </div>
+        )}
+      </Link>
+    </ThemeProvider>
+  );
+};
 
 export default ProjectCard;

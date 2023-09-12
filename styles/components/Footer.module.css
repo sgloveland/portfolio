@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 5%;
+  padding-block: 1.5rem;
+  border-top: 1px solid #656464;
+  margin-top: 2rem;
+}
+
+.socialButtonContainer {
+  display: flex;
+  column-gap: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.socialButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: 0.2s ease-in-out;
+}
+
+.socialButton:hover {
+  background-color: #f1f1f1;
+  color: #000000;
+  transform: scale(1.1);
+}
+
+.socialButtonLogo {
+  font-size: 1.5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+}

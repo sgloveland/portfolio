@@ -3,28 +3,28 @@
     "name": "Fashion E-Commerce Store",
     "date": "February 2023 - March 2023",
     "description": "A simple fashion e-commerce store where users can place orders for various items. Utilizes server side rendering using Node.js and Express.js to greatly improve loading speed and performance of the website.",
-    "skills": ["React.js", "TypeScript", "Node.js", "Express.js", "MongoDB"],
+    "skills": ["/react.png", "/typescript.png", "/node-js.png"],
     "link": "https://github.com/sgloveland/mern-ecommerce"
   },
   {
     "name": "Tile Matching Game Engine",
     "date": "February 2023 - March 2023",
     "description": "Worked in a small team of 5 developers to design and implement a tile matching game engine utilizing software design principles to improve maintainability and scalability of the engine. Implemented logic for the game Memory Match using this game engine.",
-    "skills": ["Java", "JavaFX", "Software Design"],
+    "skills": ["/java.png"],
     "link": "https://github.com/sgloveland/inf-122-tmge"
   },
   {
     "name": "Classical Accessibility",
     "date": "December 2022",
     "description": "Created a simple web app to allow users to learn about classical music. However, this web app utilizes Handtrack.js to track users' hands which allows for users to navigate this web app almost exclusively through the use of gestures.",
-    "skills": ["Typescript", "Angular", "Handtrack.js"],
+    "skills": ["/angular.png", "/typescript.png"],
     "demo": "https://youtu.be/qC9nWydlBLE"
   },
   {
     "name": "Sleep Tracker",
     "date": "November 2022",
     "description": "Designed and built a Cross-Platform Progressive Web App using Angular and Ionic. This app allows users to log overnight sleep as well as their sleepiness level based on the Stanford Sleepiness Scale.",
-    "skills": ["Typescript", "Angular", "Ionic"],
+    "skills": ["/angular.png", "/typescript.png"],
     "demo": "https://youtu.be/FPTZin2OLo4"
   },
   {
@@ -32,6 +32,6 @@
     "date": "June 2021",
     "description": "A C++ program to read a bitmap image and count the number of pixels that are specific RGB color values. Able to read over 700,000 pixels within roughly 3 seconds.",
     "link": "https://github.com/sgloveland/ColorCounter",
-    "skills": ["C++", "STL", "Data Structures"]
+    "skills": ["/cplusplus.png"]
   }
 ]
