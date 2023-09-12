@@ -36,7 +36,7 @@ const ProjectCard = ({
           <p className={styles.description}>{description}</p>
           <div className={styles.skillContainer}>
             {skills.map((skill, index) => (
-              <div className={styles.skillImage}>
+              <div className={styles.skillImage} key={index}>
                 <Image src={skill} fill alt="" />
               </div>
             ))}

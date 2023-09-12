@@ -39,9 +39,10 @@ const HeadlineCard = () => {
         priority
       />
       <Box className={styles.infoContainer}>
-        <h1 className={styles.name}>Hello! I'm Sean.</h1>
+        <h1 className={styles.name}>{"Hello! I'm Sean"}</h1>
         <h2 className={styles.title}>
-          I'm a <span ref={element}></span>
+          {"I'm a "}
+          <span ref={element}></span>
         </h2>
       </Box>
     </Container>
